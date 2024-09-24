@@ -50,11 +50,11 @@ document.getElementById("noakhali-donation-submit-btn").addEventListener('click'
   const donatedBalanceShow = getTextValueById('noakhali-donated-amount-show');
   const date = new Date();
 
-  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount >= 0){
+  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount > 0){
     document.getElementById('lg-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('sm-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('noakhali-donated-amount-show').innerText= donatedBalanceShow + donatedAmount;
-
+    my_modal_1.showModal();
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
@@ -64,6 +64,15 @@ document.getElementById("noakhali-donation-submit-btn").addEventListener('click'
         </div>
       `;
     document.getElementById('history').appendChild(newDiv);
+  }else if(donatedAmount === 0){
+    alert('Please donate at least 1Tk for humanity.')
+  }
+  else if(isNaN(donatedAmount)){
+    alert("Only Number Input Allowed!");
+  } else if(donatedAmount > availableBalance){
+    alert("You Have Insufficient Balance!");
+  }else if(donatedAmount < 0 ){
+    alert("Only Positive Number Allowed!")
   }
 })
 
@@ -74,10 +83,11 @@ document.getElementById("feni-donation-submit-btn").addEventListener('click', fu
   const donatedBalanceShow = getTextValueById('feni-donated-amount-show');
   const date = new Date();
 
-  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount >= 0){
+  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount > 0){
     document.getElementById('lg-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('sm-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('feni-donated-amount-show').innerText= donatedBalanceShow + donatedAmount;
+    my_modal_1.showModal();
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
@@ -87,6 +97,15 @@ document.getElementById("feni-donation-submit-btn").addEventListener('click', fu
         </div>
       `;
     document.getElementById('history').appendChild(newDiv);
+  }else if(donatedAmount === 0){
+    alert('Please donate at least 1Tk for humanity.')
+  }
+  else if(isNaN(donatedAmount)){
+    alert("Only Number Input Allowed!");
+  } else if(donatedAmount > availableBalance){
+    alert("You Have Insufficient Balance!");
+  }else if(donatedAmount < 0 ){
+    alert("Only Positive Number Allowed!")
   }
 })
 
@@ -97,11 +116,11 @@ document.getElementById("quota-donation-submit-btn").addEventListener('click', f
   const donatedBalanceShow = getTextValueById('quota-donated-amount-show');
   const date = new Date();
 
-  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount >= 0){
+  if(!isNaN(donatedAmount) && donatedAmount < availableBalance && donatedAmount > 0){
     document.getElementById('lg-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('sm-available-balance').innerText = availableBalance - donatedAmount;
     document.getElementById('quota-donated-amount-show').innerText= donatedBalanceShow + donatedAmount;
-
+    my_modal_1.showModal();
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
@@ -111,5 +130,14 @@ document.getElementById("quota-donation-submit-btn").addEventListener('click', f
         </div>
       `;
     document.getElementById('history').appendChild(newDiv);
+  }else if(donatedAmount === 0){
+    alert('Please donate at least 1Tk for humanity.')
+  }
+  else if(isNaN(donatedAmount)){
+    alert("Only Number Input Allowed!");
+  } else if(donatedAmount > availableBalance){
+    alert("You Have Insufficient Balance!");
+  }else if(donatedAmount < 0 ){
+    alert("Only Positive Number Allowed!")
   }
 })
