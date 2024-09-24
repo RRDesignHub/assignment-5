@@ -1,3 +1,12 @@
+document.getElementById('lg-blog-btn').addEventListener('click', function(){
+  window.location.href = './blog.html';
+})
+document.getElementById('sm-blog-btn').addEventListener('click', function(){
+  window.location.href = './blog.html';
+})
+
+
+
 // donation layout show function
 document.getElementById('donation-layout-btn').addEventListener('click', function(){
   document.getElementById('donation-layout-btn').classList.remove('bg-transparent');
@@ -141,3 +150,5 @@ document.getElementById("quota-donation-submit-btn").addEventListener('click', f
     alert("Only Positive Number Allowed!")
   }
 })
+
+

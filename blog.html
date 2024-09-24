@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              darkOne: "#111111",
+              darkTwo: "#1111114d",
+              darkThree: "#111111b3",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        font-family: "Lexend", Arial, Helvetica, sans-serif;
+      }
+    </style>
+</head>
+<body>
+  <header class="px-2 lg:px-28 bg-[#F9F7F3] drop-shadow-md ">
+    <div class="navbar sticky top-0 bg-[#F9F7F3] max-sm:gap-4 max-sm:px-0">
+      <div class="max-sm:hidden flex-1 justify-start">
+        <a id="lg-back-home-btn" class="btn  text-xl bg-primary text-darkOne">Home</a>
+      </div>
+
+      <div class="flex-1 max-sm:justify-start  justify-end">
+        <div class="flex items-center gap-2 lg:gap-4">
+          <img class="lg:w-[48px]" src="./Img/logo.png" alt="">
+          <a class="text-darkOne text-lg lg:text-xl font-bold max-sm:w-28">As-Sunnah Foundation</a>
+        </div>
+      </div>
+
+      <div class="max-sm:flex lg:hidden justify-center">
+        <a id="sm-back-home-btn" class="btn  text-xl bg-primary text-darkOne">Home</a>
+      </div>
+
+      
+    </div>
+  </header>
+  <main class="px-2 lg:px-28 py-14 space-y-4">
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" checked="checked" />
+      <div class="collapse-title text-xl font-medium">What is the DOM in JavaScript, and how is it used?</div>
+      <div class="collapse-content">
+        <p class="text-darkThree">The DOM is a programming interface that represents the structure of a web document, allowing JavaScript to dynamically manipulate HTML content and respond to events.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">What are the primary methods to access DOM elements in JavaScript?</div>
+      <div class="collapse-content">
+        <p class="text-darkThree">Key methods include getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll() to select elements.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How do you create and insert a new element into the DOM?</div>
+      <div class="collapse-content">
+        <p class="text-darkThree">Use document.createElement() to create an element and appendChild() or insertBefore() to insert it into the DOM.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How can you remove an element from the DOM using JavaScript?</div>
+      <div class="collapse-content">
+        <p class="text-darkThree">You can remove an element using removeChild() from its parent or by directly calling remove() on the element.</p>
+      </div>
+    </div>
+  </main>
+  <script  src="./Js/blog.js"></script>
+</body>
+</html>
