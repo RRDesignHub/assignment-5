@@ -67,7 +67,7 @@ document.getElementById("noakhali-donation-submit-btn").addEventListener('click'
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
-      <div class="border border-darkTwo rounded-2xl p-8"> 
+      <div class="border border-darkTwo rounded-2xl p-4 lg:p-8"> 
           <p id="donated-in">${donatedAmount} Taka is Donate for Flood at Noakhali, Bangladesh.</p>
           <small is="time">${date}</small>
         </div>
@@ -100,7 +100,7 @@ document.getElementById("feni-donation-submit-btn").addEventListener('click', fu
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
-      <div class="border border-darkTwo rounded-2xl p-8"> 
+      <div class="border border-darkTwo rounded-2xl p-4 lg:p-8"> 
           <p id="donated-in">${donatedAmount} Taka is Donate for Flood Relief in Feni, Bangladesh.</p>
           <small is="time">${date}</small>
         </div>
@@ -133,7 +133,7 @@ document.getElementById("quota-donation-submit-btn").addEventListener('click', f
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
-      <div class="border border-darkTwo rounded-2xl p-8"> 
+      <div class="border border-darkTwo rounded-2xl p-4 lg:p-8"> 
           <p id="donated-in">${donatedAmount} Taka is Aid for Injured in the Quota Movement.</p>
           <small is="time">${date}</small>
         </div>
